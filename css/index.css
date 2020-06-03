@@ -23,6 +23,7 @@ html,
 
 .navbar-brand {
     font-family: 'Lobster', cursive;
+    color: #ff3399!important;
 }
 
 .navbar-brand::before {
@@ -35,4 +36,19 @@ html,
     margin-right: 10px;
     display: inline-block;
     vertical-align: text-bottom;
+}
+
+.carousel-indicators .active {
+    background-color: #ff3399!important;
+}
+
+.carousel-caption {
+    position: relative!important;
+    right: unset!important;
+    left: unset!important;
+}
+
+.carousel-inner {
+    background-color: #00000040;
+    padding-top: 20px;
 }
