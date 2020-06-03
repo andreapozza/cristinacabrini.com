@@ -1,0 +1,38 @@
+body,
+html {
+    background: url('../immagini/3Cattura.JPG') 25%/cover fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+body,
+html,
+.main {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    background-color: #000000ba;
+    background-position: fixed;
+    margin-top: 58.4px;
+    padding-top: 60px;
+}
+
+.navbar-brand {
+    font-family: 'Lobster', cursive;
+}
+
+.navbar-brand::before {
+    content: "";
+    background-image: url('../immagini/75379823_574520883127569_2580609736634269696_n.png');
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
