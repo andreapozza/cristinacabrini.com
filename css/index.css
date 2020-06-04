@@ -9,14 +9,14 @@ body,
 html,
 .main {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 0;
     margin: 0;
+    padding-bottom: 50px;
 }
 
 .main {
     background-color: #000000ba;
-    background-position: fixed;
     margin-top: 58.4px;
     padding-top: 60px;
 }
@@ -24,6 +24,32 @@ html,
 .navbar-brand {
     font-family: 'Lobster', cursive;
     color: #ff3399!important;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link {
+    color: #ff3399!important;
+}
+
+
+/* .navbar-dark .navbar-nav .nav-link {
+    color: white!important;
+} */
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ff3399!important;
+}
+
+#motto {
+    font-family: 'Dancing Script', cursive;
+    color: #ff3399;
+}
+
+#motto::before {
+    content: "<<";
+}
+
+#motto::after {
+    content: ">>";
 }
 
 .navbar-brand::before {
