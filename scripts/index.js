@@ -39,7 +39,7 @@ archivio.video.reverse().forEach(video => {
         '<iframe class="d-block col-10 col-md-7 mx-auto youtube_video_player" width="560" height="315" src="' + video.url + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
         '<div class="carousel-caption d-none d-md-block">' +
         '    <h5>' + video.titolo + '</h5>' +
-        '    <p>' + video.descrizione + '</p>' +
+        '    <p class="text-justify">' + video.descrizione + '</p>' +
         '</div></div>';
     $('.carousel-inner').append(slide)
 
