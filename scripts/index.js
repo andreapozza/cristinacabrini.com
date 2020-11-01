@@ -31,6 +31,22 @@ archivio.video.reverse().forEach(video => {
 $('.carousel-item').eq(0).addClass('active');
 $('.carousel-indicators').find('li').eq(0).addClass('active');
 
+var videos = document.querySelectorAll('.settore video');
+videos.forEach( video => {
+
+    video.onclick = () => {
+        video.focus();
+    }
+
+    video.onfocus = () => { 
+        video.muted = false;
+    }
+
+    video.onblur = () => { 
+        video.muted = true 
+    }
+})
+
 function showMore(longText, max = 200) {
     
     if(longText.length < max) {

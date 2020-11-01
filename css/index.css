@@ -134,8 +134,8 @@ a:hover{
 }
 
 @media only screen and (max-width: 425px) {
-    .settore img:focus, .settore video:hover {
-        width: 100%;
+    .settore img:focus, .settore video:focus {
+        width: 95%;
         height: auto;
     }
 }
