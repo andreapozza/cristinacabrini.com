@@ -3,6 +3,24 @@ body{
     width: 100%;
     height: 100vh;
 }
+.bg {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../immagini/3Cattura.JPG') 25%/cover;
+}
+
+.bg>div {
+    position: fixed;
+    background-color: #00000094;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
 
 body,
 .main {
@@ -13,7 +31,7 @@ body,
 }
 
 .main {
-    background-color: #000000ba;
+    background-color: #00000094;
     margin-top: 58.4px;
     padding-top: 60px;
     padding-bottom: 50px;
