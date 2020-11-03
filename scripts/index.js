@@ -1,5 +1,7 @@
 //scroll anchor links fixed
 var switchView = function (hash = location.hash) {
+
+    /* Remember to import https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js for cross-browser support*/
     
     //get top position relative to viewport
     var elem = document.querySelector(hash),
