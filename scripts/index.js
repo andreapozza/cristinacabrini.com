@@ -1,3 +1,30 @@
+//scroll anchor links fixed
+var switchView = function (hash = location.hash) {
+    
+    //get top position relative to viewport
+    var elem = document.querySelector(hash),
+        elemRect = elem.getBoundingClientRect(),
+        bodyRect = document.body.getBoundingClientRect(),
+        offset = elemRect.top - bodyRect.top;
+    window.scroll({
+        top: offset,
+        behavior: 'smooth'
+    })
+}
+
+document.body.onload = () => { if(location.hash) switchView() } 
+window.onhashchange = () => { switchView() }
+
+$('.nav-link').click((e) => {
+
+    //evito il comportamento normale perché interferisce con la funzione personalizzata
+    e.preventDefault()
+    switchView(e.target.attributes.href.value)
+
+    //auto close navbar
+    $('.navbar-collapse').collapse('hide')
+})
+
 $('#carouselExampleCaptions').on('slide.bs.carousel', function() {
     
         $('.youtube_video_player:visible').each(function() {
@@ -28,11 +55,10 @@ archivio.video.reverse().forEach(video => {
 
 });
 
-$('.carousel-item').eq(0).addClass('active');
-$('.carousel-indicators').find('li').eq(0).addClass('active');
+document.getElementsByClassName('carousel-item')[0].classList.add('active');
+document.querySelectorAll('.carousel-indicators li')[0].classList.add('active');
 
-var videos = document.querySelectorAll('.settore video');
-videos.forEach( video => {
+document.querySelectorAll('.settore video').forEach( video => {
 
     video.onclick = () => {
         video.focus();
@@ -43,7 +69,7 @@ videos.forEach( video => {
     }
 
     video.onblur = () => { 
-        video.muted = true 
+        video.muted = true;
     }
 })
 
